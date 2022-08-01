@@ -1,4 +1,4 @@
-  <template>
+<template>
   <div class="wrapper-content wrapper-content--fixed">
     <section>
       <div class="container">
@@ -10,9 +10,10 @@
               :perPage="1"
               :paginationEnable="true"
               paginationColor="#b3b3b3"
-              paginationActiveColor="#494ce8">
+              paginationActiveColor="#494ce8"
+            >
               <slide v-for="(slide, index) in product.gallery" :key="index">
-                <img :src="slide.img" :alt="slide.name">
+                <img :src="slide.img" :alt="slide.name" />
               </slide>
             </carousel>
           </div>
@@ -20,7 +21,7 @@
           <!-- //content -->
 
           <div class="product__content">
-            <h1 class="title">{{product.title}}</h1>
+            <h1 class="title">{{ product.title }}</h1>
             <p>{{ product.descr }}</p>
           </div>
         </div>
@@ -33,7 +34,7 @@
 export default {
   data() {
     return {
-      product: null
+      product: null,
     };
   },
 
@@ -41,7 +42,7 @@ export default {
     // console.log(this.$route)
     let id = this.$route.params.id;
     this.product = this.$store.getters.getProduct(id);
-  }
+  },
 };
 </script>
 <style lang="scss">
@@ -57,4 +58,3 @@ export default {
   text-align: center;
 }
 </style>
-
