@@ -1,5 +1,7 @@
 # Shop
 
+Demo: https://incorrect111.github.io/shop/
+
 ## Project setup
 ```
 npm install
