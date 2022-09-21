@@ -4,7 +4,6 @@
       <div class="container">
         <div class="product__wrapper">
           <!-- slider -->
-
           <div class="product__slider">
             <carousel
               :perPage="1"
@@ -17,8 +16,6 @@
               </slide>
             </carousel>
           </div>
-
-          <!-- //content -->
 
           <div class="product__content">
             <h1 class="title">{{ product.title }}</h1>
@@ -39,7 +36,6 @@ export default {
   },
 
   created() {
-    // console.log(this.$route)
     let id = this.$route.params.id;
     this.product = this.$store.getters.getProduct(id);
   },

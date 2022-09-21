@@ -1,6 +1,7 @@
 // тк мы к ним обращаемся везде ниже
 @import "utils/vars";
 @import "utils/reset";
+@import "md-body";
 
 html {
   line-height: $mainLineHeight;
@@ -76,15 +77,21 @@ section, .section {
 }
 
 .container {
-  width: 100%;
-  flex: 0 0 auto;
   position: relative;
-  max-width: $desktopWidth;
+  flex: 0 0 auto;
   margin: 0 auto;
+  width: 100%;
+  max-width: $lgDesktopWidth;
+  @media screen and (max-width: $lgDesktopWidth) {
+    padding: 0 16px;
+  }
   @media screen and (max-width: $smDesktopWidth) {
     max-width: $tableWidth;
   }
   @media screen and (max-width: $tableWidth) {
+    max-width: $smTableWidth;
+  }
+  @media screen and (max-width: $smTableWidth) {
     max-width: $phoneWidth;
   }
   @media screen and (max-width: $phoneWidth) {

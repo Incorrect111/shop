@@ -1,9 +1,12 @@
 <template>
-  <div class="wrapper-content wrapper-content--fixed">
-    <section>
-      <div class="container">
-        <h1>Home page</h1>
-      </div>
-    </section>
-  </div>
+  <Shop />
 </template>
+
+<script>
+import Shop from "@/components/Shop.vue";
+export default {
+  components: {
+    Shop,
+  },
+};
+</script>
